@@ -4,4 +4,7 @@ import br.com.msp.findurbuddy.adapter.output.persistence.entities.HomeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HomeRepository extends JpaRepository<HomeEntity, String> {
+    boolean existsByName(String name);
+
+    boolean existsByAddress(String address);
 }
