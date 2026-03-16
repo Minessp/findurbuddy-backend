@@ -1,7 +1,6 @@
 package br.com.msp.findurbuddy.adapter.output.exceptionhandler;
 
-import br.com.msp.findurbuddy.core.exceptions.ExistingEntityException;
-import br.com.msp.findurbuddy.core.exceptions.apierror.ApiError;
+import br.com.msp.findurbuddy.core.exceptions.ApiError;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -28,8 +27,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler({IllegalArgumentException.class,
-                       MethodArgumentNotValidException.class,
-                       ExistingEntityException.class})
+                       MethodArgumentNotValidException.class})
     public ResponseEntity<ApiError> badRequestExceptions(Exception e) {
         ApiError apiError = apiErrorMethod(e, HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);

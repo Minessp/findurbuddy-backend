@@ -2,7 +2,9 @@ package br.com.msp.findurbuddy.adapter.output.persistence.entities;
 
 import com.github.f4b6a3.ulid.UlidCreator;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.net.URL;
 

@@ -7,4 +7,6 @@ public interface HomeRepository extends JpaRepository<HomeEntity, String> {
     boolean existsByName(String name);
 
     boolean existsByAddress(String address);
+
+    HomeEntity findHomeEntityById(String id);
 }

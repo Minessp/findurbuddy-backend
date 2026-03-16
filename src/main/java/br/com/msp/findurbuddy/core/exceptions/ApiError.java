@@ -1,4 +1,4 @@
-package br.com.msp.findurbuddy.core.exceptions.apierror;
+package br.com.msp.findurbuddy.core.exceptions;
 
 import java.util.List;
 
